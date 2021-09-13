@@ -13,7 +13,13 @@ class Users extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('users', function (Blueprint $table) {
+            $table->id('userid');
+            $table->string('username');
+            $table->text('password');
+            $table->text('birthday');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class Users extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('users');
     }
 }
