@@ -8,7 +8,7 @@ const Navigation = () => {
     const user = false;
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top" className="mb-4">
             <Container fluid>
                 <Navbar.Brand as={Link} to='/'>React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -35,8 +35,8 @@ const Navigation = () => {
                                 </NavDropdown>
                                 :
                                 <NavDropdown title="Account" id="collasible-nav-dropdown" align="end">
-                                    <NavDropdown.Item as={Link} to='/signin'>Sign in</NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to='/signup'>Sign up</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to='/login'>Sign in</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to='/register'>Sign up</NavDropdown.Item>
                                 </NavDropdown>
                         }
                     </Nav>
