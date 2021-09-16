@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navigation from './Navigation';
 import Home from './Home/Home';
 import Auth from './Auth/Auth';
+import User from './User';
 
 function Index() {
     return (
@@ -12,6 +13,8 @@ function Index() {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={Auth} />
+                <Route path="/add-user" component={Auth} />
+
             </Switch>
         </BrowserRouter>
     );
